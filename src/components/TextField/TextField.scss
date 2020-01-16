@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+:root {
+  --font-roboto: 'Roboto', sans-serif;
+}
+
+.MaterialUI-TextField {
+  &__input-container {
+    position: relative;
+    width: 100%;
+  }
+
+  &__input {
+    padding: 24px 12px 10px;
+    border: 1px solid gray;
+    outline: 0;
+    width: 100%;
+
+    &:focus {
+      border-color: gray;
+      // Curious FF behaviour
+      outline-style: none;
+
+      & + label {
+        transform: translate(2px, 5px) scale(0.8);
+      }
+    }
+
+    & + label {
+      font-family: var(--font-roboto);
+      font-size: 1rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(14px, 15px) scale(1);
+      transition: transform 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    & + label.MaterialUI-TextField__label.MaterialUI-TextField__label--active {
+      transform: translate(2px, 5px) scale(0.8);
+    }
+
+  }
+}

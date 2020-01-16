@@ -1,0 +1,17 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  width: 50%;
+}
+
+.error {
+  font-size: 0.7rem;
+  color: red;
+  text-align: left;
+}
+
+.styledButton {
+  padding: 10px;
+  background: transparent;
+  border: 2px solid black;
+}
